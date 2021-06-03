@@ -73,6 +73,8 @@ spec:
           args:
           - "discovery"
           - --monitoringAddr=:15014
+          - --registries=Kubernetes,Consul
+          - --consulserverURL=http://10.0.0.18:18500
 {{- if .Values.global.logging.level }}
           - --log_output_level={{ .Values.global.logging.level }}
 {{- end}}
